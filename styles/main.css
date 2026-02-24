@@ -1,0 +1,153 @@
+/*
+==============================
+|           Navbar           |
+==============================
+*/
+
+/* barra anuncio oferta */
+
+
+
+
+/* Navbar */
+
+a svg{
+    color: rgb(41, 41, 41);
+    text-decoration: none;
+}
+
+/*
+==============================
+|           Footer           |
+==============================
+*/
+
+
+
+
+/*
+==============================
+|  index (página de inicio)  |
+==============================
+*/
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+/*
+|================  Tarjetas de productos  ===============|
+*/
+
+/* Evita que el texto se encime si no hay imagen */
+.product-card img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.text-warning {
+    color: #ffc107 !important;
+    font-size: 1.1rem;
+}
+
+
+.add-to-cart-overlay {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.product-card:hover .add-to-cart-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*
+==============================
+|    singUp (Crear cuenta)   |
+==============================
+*/
+
+
+
+
+
+
+/*
+==============================
+|   logIn (Iniciar sesión)   |
+==============================
+*/
+
+
+
+
+/*
+==============================
+|       cart (Carrito)       |
+==============================
+*/
+
+
+/*
+=================================
+|  checkOut (pasarela de pago)  |
+=================================
+*/
+
+
+
+/*
+==================================
+|  aboutMe (Acerca de nosotros)  |
+==================================
+*/
+div {
+    font-family: 'Poppins', sans-serif;
+}
+
+div h4 {
+    color: #DB4444;
+    font-weight: 700;
+}
+
+div h6{
+    font-weight: 600;
+}
+
+div p {
+    font-weight: 400;
+}
+
+/*  NUESTRA HISTORIA */
+
+/*  NUESTRO NÚMEROS */
+
+/*  EQUIPO DE TRABAJO */
+
+/* NUESTROS SELLOS */
+
+
+/*
+==================================
+|  contact (Página de contacto)  |
+==================================
+*/
+
+
+
+/*
+===================================
+|  producto (Página de producto)  |
+===================================
+*/
