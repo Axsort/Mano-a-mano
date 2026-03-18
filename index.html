@@ -38,7 +38,9 @@
       <main class="content container-fluid">
       <div class="page">
         <!-- MENÚ LATERAL -->
-      <div class="banner-cat">
+      <a href="./pages/products.html"><div class="banner-cat">
+        
+        <!-- Comentado para implementar despúes
         <aside class="sidebar">
           <h2 class="logo">Tienda</h2>
           <nav class="menu">
@@ -52,20 +54,62 @@
             <a href="#">Salud y Cuidado personal</a>
           </nav>
         </aside>
-
-        <img src="./media/products/Productos_Mexicanos.png" class="hero"  alt="ProductosMexicanos">
-      </div>    
+        -->
+      </div></a>
         
         <section class="main">
+        </section>
+      </div>
+    </main>
+  <!-- BUSCA POR CATEGORÍA -->
+          <section class="container containerBC">
+            <span class="tag">Categorías</span>
+            <h2 class="titulo-seccion" >Busca por categoría</h2>
 
-          <!-- GRANDES OFERTAS -->
+            <div class="categories-row">
+
+              <div class="cat-card" onclick="irCategoria('ropa')">
+                <span class="cat-icon">👗</span>
+                <p>Ropa</p>
+              </div>
+
+              <div class="cat-card" onclick="irCategoria('accesorios')">
+                <span class="cat-icon">👜</span>
+                <p>Accesorios</p>
+              </div>
+
+              <div class="cat-card" onclick="irCategoria('alimentos')">
+                <span class="cat-icon">🍯</span>
+                <p>Alimentos</p>
+              </div>
+
+              <div class="cat-card" onclick="irCategoria('cocina')">
+                <span class="cat-icon">🍽️</span>
+                <p>Cocina</p>
+              </div>
+
+              <div class="cat-card" onclick="irCategoria('decoracion')">
+                <span class="cat-icon">🏺</span>
+                <p>Decoración</p>
+              </div>
+
+              <div class="cat-card" onclick="irCategoria('recuerdos')">
+                <span class="cat-icon">🎁</span>
+                <p>Recuerdos</p>
+              </div>
+
+            </div>
+          </section>
+
+                    <!-- GRANDES OFERTAS -->
 <section class="offers">
   <div class="offers-header">
     <div>
-      <span class="tag">Últimas novedades</span>
+      <span class="tag tagUN">Últimas novedades</span>
       <h2>Grandes Ofertas</h2>
     </div>
 
+    <!--
     <div class="offers-controls">
       <div class="countdown">
         <div>
@@ -86,10 +130,14 @@
         </div>
       </div>
     </div>
+    -->
 
+    
     <!-- Botones carrusel -->
+     <div class="arrows">
     <button class="offers-arrow offers-prev" aria-label="Anterior">‹</button>
     <button class="offers-arrow offers-next" aria-label="Siguiente">›</button>
+    </div>
   </div>
 
   <!-- CONTENEDOR desde el JSON -->
@@ -104,42 +152,6 @@
 </section>
 
 
-          <!-- BUSCA POR CATEGORÍA -->
-          <section class="categories">
-            <span class="tag">Categorías</span>
-            <h2>Busca por categoría</h2>
-
-            <div class="categories-row">
-              <div class="cat-card">
-                <span class="cat-icon">📱</span>
-                <p>Teléfonos</p>
-              </div>
-              <div class="cat-card">
-                <span class="cat-icon">💻</span>
-                <p>Computadoras</p>
-              </div>
-              <div class="cat-card">
-                <span class="cat-icon">⌚</span>
-                <p>Smartwatch</p>
-              </div>
-              <div class="cat-card">
-                <span class="cat-icon">🎁</span>
-                <p>Recuerdos</p>
-              </div>
-              <div class="cat-card">
-                <span class="cat-icon">🎧</span>
-                <p>Audífonos</p>
-              </div>
-              <div class="cat-card">
-                <span class="cat-icon">🧸</span>
-                <p>Juguetes</p>
-              </div>
-            </div>
-          </section>
-        </section>
-      </div>
-    </main>
-      <!--Aqui termina Gabo -->
 
 <!-- Este mes -->
 
@@ -276,10 +288,6 @@
     </div>
 
   </section>
-
-
-
-
 
     <footer id="footer_container_index">
       <!-- Footer -->
