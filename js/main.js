@@ -18,7 +18,7 @@ if (navbar_container_index) {
                     <div class="container-fluid">
 
                         <!-- Logo ManoAMano -->
-                        <img id="logo_Ajolote" src="../media/NavBar/Logoajolote5.png">
+                        <img id="logo_Ajolote" src="media/NavBar/Logoajolote5.png">
 
                         <!-- Buscador -->
                             <div class="d-flex align-items-center gap-3 order-lg-last">
@@ -31,7 +31,7 @@ if (navbar_container_index) {
                                      <!-- icono buscar en responsive -->
                                     <button class="btn p-0 d-lg-none toggle-buscador" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#buscadorExpandido">
-                                    <img src="../media/NavBar/iconobusqueda.png"
+                                    <img src="media/NavBar/iconobusqueda.png"
                                     alt="Buscar"
                                     class="icon-search">
                                     </button>
@@ -103,20 +103,20 @@ if (navbar_container_index) {
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
 
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../index.html">Inicio</a>
+                                    <a class="nav-link text-dark" href="index.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/products.html">Productos</a>
+                                    <a class="nav-link text-dark" href="pages/products.html">Productos</a>
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/contact.html">Contacto</a>
+                                    <a class="nav-link text-dark" href="pages/contact.html">Contacto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/aboutMe.html">Nosotros</a>
+                                    <a class="nav-link text-dark" href="pages/aboutMe.html">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/iniciarSesion.html">Iniciar Sesión</a>
+                                    <a class="nav-link text-dark" href="pages/iniciarSesion.html">Iniciar Sesión</a>
                                 </li>
                             </ul>
 
@@ -150,7 +150,7 @@ if (navbar_container_index) {
                     </div>
 
                     <div class="p-3 border-top">
-                        <a href="../pages/carrito.html" class="btn btn-dark w-100">
+                        <a href="pages/carrito.html" class="btn btn-dark w-100">
                         Proceder al pago
                         </a>
                     </div>
@@ -191,7 +191,7 @@ if (navbar_container) {
                     <div class="container-fluid">
 
                         <!-- Logo ManoAMano -->
-                        <img id="logo_Ajolote" src="../media/NavBar/Logoajolote5.png">
+                        <img id="logo_Ajolote" src="media/NavBar/Logoajolote5.png">
 
                         <!-- Buscador -->
                             <div class="d-flex align-items-center gap-3 order-lg-last">
@@ -204,7 +204,7 @@ if (navbar_container) {
                                      <!-- icono buscar en responsive -->
                                     <button class="btn p-0 d-lg-none toggle-buscador" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#buscadorExpandido">
-                                    <img src="../media/NavBar/iconobusqueda.png"
+                                    <img src="media/NavBar/iconobusqueda.png"
                                     alt="Buscar"
                                     class="icon-search">
                                     </button>
@@ -276,20 +276,20 @@ if (navbar_container) {
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
 
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../index.html">Inicio</a>
+                                    <a class="nav-link text-dark" href="index.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/products.html">Productos</a>
+                                    <a class="nav-link text-dark" href="pages/products.html">Productos</a>
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/contact.html">Contacto</a>
+                                    <a class="nav-link text-dark" href="pages/contact.html">Contacto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/aboutMe.html">Nosotros</a>
+                                    <a class="nav-link text-dark" href="pages/aboutMe.html">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" href="../pages/iniciarSesion.html">Iniciar Sesión</a>
+                                    <a class="nav-link text-dark" href="pages/iniciarSesion.html">Iniciar Sesión</a>
                                 </li>
                             </ul>
 
@@ -318,7 +318,7 @@ if (navbar_container) {
                 </div>
 
                 <div class="mt-auto">
-                    <a href="../pages/carrito.html" class="btn btn-dark w-100">
+                    <a href="pages/carrito.html" class="btn btn-dark w-100">
                         Proceder al pago
                     </a>
                 </div>
@@ -359,20 +359,21 @@ function cargarMenuPerfil(){
 
     if(!menuPerfil) return;
 
-    const usuarioGuardado = localStorage.getItem("usuarioActivo");
+    const usuarioGuardado = sessionStorage.getItem("usuarioActivo");
 
     if(usuarioGuardado){
 
         const usuario = JSON.parse(usuarioGuardado);
+        const primerNombre = usuario.nombre ? usuario.nombre.split(" ")[0] : "Usuario";
 
         menuPerfil.innerHTML = `
             <li class="dropdown-item-text fw-bold">
-                Hola, ${usuario.nombre.split(" ")[0]}!
+                ¡Hola, ${primerNombre}!
             </li>
 
             <li><hr class="dropdown-divider"></li>
 
-            <li><a class="dropdown-item" href="../pages/comprador.html">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="pages/comprador.html">Mi perfil</a></li>
 
             <li><button class="dropdown-item" id="cerrarSesion">Cerrar sesión</button></li>
         `;
@@ -380,8 +381,8 @@ function cargarMenuPerfil(){
     }else{
 
         menuPerfil.innerHTML = `
-            <li><a class="dropdown-item" href="../pages/iniciarSesion.html">Iniciar sesión</a></li>
-            <li><a class="dropdown-item" href="../pages/crearCuenta.html">Crear cuenta</a></li>
+            <li><a class="dropdown-item" href="pages/iniciarSesion.html">Iniciar sesión</a></li>
+            <li><a class="dropdown-item" href="pages/crearCuenta.html">Crear cuenta</a></li>
         `;
     }
 }
@@ -393,9 +394,10 @@ document.addEventListener("click", function(e){
 
     if(e.target.id === "cerrarSesion"){
 
+        sessionStorage.removeItem("usuarioActivo");
         localStorage.removeItem("usuarioActivo");
 
-        window.location.reload();
+        window.location.href = "index.html";
     }
 
 });
@@ -408,7 +410,7 @@ function initSearchHandlers() {
     query = query.trim();
 
     if (query !== "") {
-      window.location.href = `../pages/products.html?q=${encodeURIComponent(query)}`;
+      window.location.href = `pages/products.html?q=${encodeURIComponent(query)}`;
     }
   }
 
@@ -515,29 +517,6 @@ if (footer_container_index) {
                         </div>
                     </div>
 
-                    <div class="col"> 
-                        <div class="subtitle_footer">
-                            <h4>Descarga la app</h4>
-                            <img src="${flecha_abajo}" alt="flecha apuntando hacia abajo" class="subtitle_footer_row row_down">
-                        </div>
-                        <div class="description_footer">
-                            <div class="app-section d-flex flex-column align-items-center">
-                                <img src="../media/aboutMe/codigoQR.PNG" alt="QR" class="qr img-fluid">
-                                <div class="botones-seccion d-flex flex-column flex-md-row gap-2 mt-3">
-                                    <a href="URL_APP_STORE" target="_blank">
-                                    <img src="../media/aboutMe/AppStore.png" alt="Descargar en App Store" class="img-fluid store-logo"></a>
-                                    <a href="URL_PLAY_STORE" target="_blank">
-                                    <img src="../media/aboutMe/GooglePlay.png" alt="Disponible en Google Play" class="img-fluid store-logo"></a>
-                                </div>
-                            </div>
-                            <div class="social-icons">
-                                <a href="URL_DE_TU_INSTAGRAM" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="URL_DE_TU_X" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="URL_DE_TU_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="URL_DE_TU_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -545,8 +524,8 @@ if (footer_container_index) {
 }
 
 if (footer_container) {
-    var flecha_abajo="../media/footer/flecha_abajo.png"
-    var flecha_arriba = "../media/footer/flecha_arriba.png"
+    var flecha_abajo="media/footer/flecha_abajo.png"
+    var flecha_arriba = "media/footer/flecha_arriba.png"
   footer_container.innerHTML = `
   <div class="piedepagina" id="piedepagina_contenedor">
             <div class="piedepagina-container container-fluid">
@@ -611,29 +590,7 @@ if (footer_container) {
                         </div>
                     </div>
 
-                    <div class="col"> 
-                        <div class="subtitle_footer">
-                            <h4>Descarga la app</h4>
-                            <img src="${flecha_abajo}" alt="flecha apuntando hacia abajo" class="subtitle_footer_row row_down">
-                        </div>
-                        <div class="description_footer">
-                            <div class="app-section d-flex flex-column align-items-center">
-                                <img src="../media/aboutMe/codigoQR.PNG" alt="QR" class="qr img-fluid">
-                                <div class="botones-seccion d-flex flex-column flex-md-row gap-2 mt-3">
-                                    <a href="URL_APP_STORE" target="_blank">
-                                    <img src="../media/aboutMe/AppStore.png" alt="Descargar en App Store" class="img-fluid store-logo"></a>
-                                    <a href="URL_PLAY_STORE" target="_blank">
-                                    <img src="../media/aboutMe/GooglePlay.png" alt="Disponible en Google Play" class="img-fluid store-logo"></a>
-                                </div>
-                            </div>
-                            <div class="social-icons">
-                                <a href="URL_DE_TU_INSTAGRAM" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="URL_DE_TU_X" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="URL_DE_TU_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="URL_DE_TU_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -769,19 +726,6 @@ function ocultaElementos(){
         }
     })
 
-    subtitle_footer[4].addEventListener("click", ()=>{
-        if(!appOculto){
-            description_footer[4].style.display="none"
-            appOculto=true
-            subtitle_footer[4].innerHTML=`<h4>Descarga la app</h4>
-                                <img src="${flecha_abajo}" alt="flecha apuntando hacia abajo" class="subtitle_footer_row row_up">`
-        } else {
-            description_footer[4].style.display=""
-            appOculto=false
-            subtitle_footer[4].innerHTML=`<h4>Descarga la app</h4>
-                                <img src="${flecha_arriba}" alt="flecha apuntando hacia abajo" class="subtitle_footer_row row_down">`
-        }
-    })
 
 }
 
@@ -859,30 +803,6 @@ window.addEventListener("resize", ()=>{
                             <p>Términos de uso</p>
                             <p>FAQ</p>
                             <p>Contacto</p>
-                        </div>
-                    </div>
-
-                    <div class="col"> 
-                        <div class="subtitle_footer">
-                            <h4>Descarga la app</h4>
-                            <img src="${flecha_abajo}" alt="flecha apuntando hacia abajo" class="subtitle_footer_row row_down">
-                        </div>
-                        <div class="description_footer">
-                            <div class="app-section d-flex flex-column align-items-center">
-                                <img src="../media/aboutMe/codigoQR.PNG" alt="QR" class="qr img-fluid">
-                                <div class="botones-seccion d-flex flex-column flex-md-row gap-2 mt-3">
-                                    <a href="URL_APP_STORE" target="_blank">
-                                    <img src="../media/aboutMe/AppStore.png" alt="Descargar en App Store" class="img-fluid store-logo"></a>
-                                    <a href="URL_PLAY_STORE" target="_blank">
-                                    <img src="../media/aboutMe/GooglePlay.png" alt="Disponible en Google Play" class="img-fluid store-logo"></a>
-                                </div>
-                            </div>
-                            <div class="social-icons">
-                                <a href="URL_DE_TU_INSTAGRAM" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="URL_DE_TU_X" target="_blank"><i class="fab fa-twitter"></i></a>
-                                <a href="URL_DE_TU_FACEBOOK" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="URL_DE_TU_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>

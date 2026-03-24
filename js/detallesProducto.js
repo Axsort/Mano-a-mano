@@ -62,12 +62,10 @@ relacionados.forEach(item => {
         <span class="discount-badge">40%</span>
 
         <div class="card-hover-actions">
-            <button class="btn-icon">
-                <img src="../media/products/botonfavoritos.png">
-            </button>
+            
         </div>
 
-        <img src="${item.img}" alt="${item.Name}" onclick="verProducto(${item.id})">
+        <img src="${item.img}" alt="${item.Name}" style="height: 220px; object-fit: contain; cursor:pointer; transition:0.3s; onclick="verProducto(${item.id})">
 
         <button class="btn-add-to-cart"
         onclick="agregarAlCarrito(${item.id}, '${item.Name}', ${item.Price}, '${item.img}')">
